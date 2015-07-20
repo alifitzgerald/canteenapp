@@ -1,55 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <script src="/node_modules/angular/angular.js"></script>
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
-
+<div class="header-container home-image">
   <% include ../partials/nav.ejs %>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
+      <div class="logo">
+      <img src="images/canteenwhite375px.png" alt="Canteen + Co.">
+    </div>
 
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide to learn more!</li>
-      </ul>
+      
+     <p class="transitions">
+        <a ng-click="showme=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Today's Bowl</a>     
+      </p> 
+    
+      
+  </div><!--end of header-container -->
+
+
+
+<div class="featured bgcolor">
+  <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+            <h2 class="headers">Today's Bowl</h2>
+              <div class="panel">
+                <div fx-instagram client-id="6f893f44aa71400b8fdc7d0608ae3bdd" user-id="2073058868" count="1">
+                
+                  <img class="images-insta" ng-repeat="img in instaImgs" ng-attr-src="{{ img.images.standard_resolution.url }}" alt="">
+               
+                </div>
+              </div><!--end panel-->
+                <ul class="transitions falist">
+           
+              <li><a ng-click="showme=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Place Order</a></li>
+              <li><a ui-sref="orderform"><button ng-show="showme"class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Pick Up</button></a></li>
+              <li><button ng-show="showme" class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Catering</button> </li>     
+      
+              </ul>
+            </div>
+            <div class="col-md-6">
+            <div class="align-left">
+            <ul class="falist desc">
+             
+              <li><h2 id="line-item"><i class="fa fa-check-square"></i> Reserve Your Bowl</h2></li>
+          
+              <li><h2 id="line-item"><i class="fa fa-check-square"></i> Sign up for Receive Weekly Bowl - CSA Style*</h2></li>
+              
+            </ul>
+            <hr />
+
+            <h3 class="desc">*CSA Style</h3>
+            <p class="desc-sm"> Yes! We serve one bowl a day - sourcing ingredients available locally that week. We can make things less expensive that way. If you sign up ahead - we can save money, and so can you. And you're supporting local farms and businesses. Sign up alone or with friends for a double discount!</p>
+             
+            
+             </div>
+            </div>
+          </div>
+      </div>
+    
+  </div><!--end container-->
+</div><!--end featured -->
+
+<div class="featured2 bgimage">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="headers">Let's Eat Better Together</h2>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
-      </ul>
+    <div class="row">
+      <div class="col-md-4 elements">
+        <img class="button-effects" src="images/clean.png">
+          <h2>Clean</h2>
+          <p>All the good stuff - Whole grains, fresh veggies, and heirloom beans - without the gunk. No chemical preservatives, refined flours, processed sugars, and hydrogenated oils. </p>
+      </div>
+       <div class="col-md-4 elements">
+          <img class="button-effects" src="images/seasonal.png">
+          <h2>Seasonal</h2>
+          <p>Our daily bowl changes based on what’s fresh and local, and what tastes good today.</p>
+          
+      </div>
+      <div class="col-md-4 elements">
+        <img class="button-effects" src="images/scratch.png">
+        <h2>From Scratch</h2>
+        <p>We’re a DIY kind of kitchen. We make our own sauces, soak our grains, and chop our veggies-  so it’s food we can feel good about. </p>
+      </div>
+              
+            </div><!--end row-->
+          </div>
+      </div>
     </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
   </div>
 </div>
+
+<div class="yellow">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 right-align">
+         <img class="testimonial-photo" src="images/ginsburg.jpg">
+      </div> 
+      <div class="col-lg-7 center-from-top">
+        <h4>"I Love Canteen and Co. Especially how one of them has a cool white eyebrow" - Pierre Kealey FitzGerald</h4>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="bgimage">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="headers">JOIN THE CLUB</h2> 
+        <div ng-include="'app/video/video.html'"></div>
+    
+
+
+      
+        
+      </div>   
+    </div>
+  </div>
+</div>
+
+   <div class="container">
+    <div class="row">
+          <div class="col-md-5">
+            <h2 id="giant-font">KNOW WHERE YOUR DOLLAR GOES</h2>
+          </div>
+           <div class="col-md-7">
+            <div class="center">
+             <img class="photo-border" src="images/gram.png">
+            </div>
+          </div>
+        
+      </div>   
+    </div>
+  </div>
+
+<div class="featured bgimage">
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="headers">CSA-INSPIRED</h2> 
+         <div class="row">
+            <ul class="falist">
+              <div class="col-md-4 elements">
+                 <li><img class="button-effects" src="images/ordering.png">
+                  <h2>Ordering</h2>
+                    </li> 
+              </div>
+               <div class="col-md-4 elements">
+                  <li><img class="button-effects" src="images/membership.png">
+                  <h2>Membership (Savings)</h2>
+                  </li>
+               </div>
+              <div class="col-md-4 elements">
+                  <li>
+                  <img class="button-effects" src="images/community.png">
+                  <h2>Community</h2>
+                  </li>
+              </div>
+            </ul>
+      </div>   
+    </div>
+    
+      <div class="col-md-12 center">
+        <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Order Now</a>
+      </div>
+    
+  </div>
+</div>
+<hr />
+    <div class="featured bgimage">
+   <div class="container">
+    <div class="row">
+     <h2 class="headers">ABOUT CANTEEN AND CO.</h2> 
+      <div class="col-lg-5">
+       
+        <p> Canteen + Co. makes eating better possible.
+
+          We’re three former food truckers with an obsession with food - and a passion for people. We looked for clean food on the streets of Boston… but no such luck. We decided to bring clean food to you, and we’re inviting you to join us.
+
+
+          We got our start hosting a recurring community dinners as The Community Canteen. Once a month, we served up simple seasonal bowls to a rotating group of members. Turns out that people liked eating our food - and loved eating together.
+
+
+          We provide good clean food for gatherings. With our seasonal bowls and consciously sourced snacks we’re launching a new way of eating. Get connected with our community to join us for a dinner, follow us to find out where popping up next, or give us a ring to ask about our catering services.
+
+          Let’s eat better, together.
+        </p><!--end col-lg-5 -->
+      </div>  
+       <div class="col-lg-7 col-md-7">
+      <img class="photo" src="images/canteen-3.png" alt="Canteen + Co.">
+    </div> 
+    </div><!-- end row -->
+  </div><!--end container -->
+</div><!--end featured bgimage -->
+
+
+      
+        
+      </div>   
+    </div>
+  </div>
+
 
 
 </body>
