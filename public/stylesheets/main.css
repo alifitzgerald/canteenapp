@@ -941,7 +941,7 @@ button .btn {
 
 
 .bgimage {
-    background-image: url("images/cream_pixels.png");
+    background-image: url("../images/cream_pixels.png");
 }
 
 .bgcolor {
@@ -1003,7 +1003,7 @@ button .btn {
 
 
 .testimonial-photo {
-    width: 75%;
+    width: 50%;
     border-radius: 25px; 
 }
 
@@ -1012,7 +1012,7 @@ button .btn {
 }
 
 .center-from-top {
-   padding-top: 10%; 
+   padding-top: 5%; 
 }
 
 #giant-font {
@@ -1041,4 +1041,19 @@ button .btn {
 #line-item i {
     color: #B0D66B;
   }
+
+  .center {
+    text-align: center;
+    padding-top: -20px; 
+    padding-bottom: 20px;  
+}
+
+.align-left {
+  text-align: left; 
+}
+
+p {
+  text-align: center; 
+  padding: 10px;
+}
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
   <script src="/node_modules/angular/angular.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <% include ../partials/header.ejs %>
 </head>
 
@@ -104,10 +105,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-5 right-align">
-         <img class="testimonial-photo" src="images/ginsburg.jpg">
+         <img class="testimonial-photo" src="images/photo.jpg">
       </div> 
       <div class="col-lg-7 center-from-top">
-        <h4>"I Love Canteen and Co. Especially how one of them has a cool white eyebrow" - Pierre Kealey FitzGerald</h4>
+        <h4>"I love Canteen & Co.'s bowl concept! It is such a simple, but delicious and healthy option for lunch on the go. Each week is a chance to taste what's most local and seasonal. Canteen & Co. will become a favorite destination for vegans and omnivores alike!"</h4>
+        <h4>-<b>Holly Fowler, Northbound Ventures</b></h4>
       </div>  
     </div>
   </div>
@@ -118,7 +120,43 @@
     <div class="row">
       <div class="col-lg-12">
         <h2 class="headers">JOIN THE CLUB</h2> 
-        <div ng-include="'app/video/video.html'"></div>
+        <div ng-controller="VideoCtrl">
+          <div class="container">
+            <div class="row">
+              <h4 class="center">Reserve your bowl online in advance. Become a member and save $$!</h4> 
+                 <div class="row">
+                  <ul class="falist">
+                    <div class="col-md-4 elements">
+                       <li><img class="button-effects" src="images/single.png">
+                        <h2>Just You</h2>
+                        <p>Reserve your bowl 24 hrs in advance for pick-up at one of our weekly locations. </p>
+                          <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Order Now</a></li> 
+                    </div>
+                     <div class="col-md-4 elements">
+                        <li><img class="button-effects" src="images/4-person.png">
+                        <h2>You + Your Crew (10+)</h2>
+                        <p>Get 10+ hungry friends together, and we’ll bring lunch to you!</p>
+                          <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Trial Run</a>
+                        </li>
+                    </div>
+                    <div class="col-md-4 elements">
+                      <li>
+                        <img class="button-effects" src="images/custom.png">
+                        <h2>DIY // Custom</h2>
+                        <p>We provide spreads for office lunches, catering, and team-building (community?) meals.</p>  
+                        <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Contact Us </a>
+                      </li>
+                    
+                    </div>
+                   </ul>          
+                  </div><!--end row-->
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
     
 
 
