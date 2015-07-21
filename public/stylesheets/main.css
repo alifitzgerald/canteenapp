@@ -1,3 +1,5 @@
+
+
 .thing-form {
     margin: 20px 0;
 }
@@ -952,6 +954,7 @@ button .btn {
     text-decoration: none;
     list-style: none;
     text-align: center; 
+    padding-left: 0px; 
 
 }
 

@@ -1,0 +1,30 @@
+<section ng-controller="OrderCtrl">
+ <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+<h2 class="headers"> Order Form </h2>
+  <form name="emailForm" class="form-horizontal">    
+        <div class="form-group col-sm-10 col-lg-10"> 
+         <label class="col-sm-2 control-label">Name</label>     
+          <input name="text" ng-model="email.text" ng-required="true">
+        </div>
+        <div class="form-group col-sm-10 col-lg-10"> 
+        <label class="col-sm-2 control-label">Email</label>     
+          <input type="email" name="from" ng-model="email.from" ng-required="true">
+        </div>
+        <div class="form-group col-sm-10 col-lg-10">
+        <label class="col-sm-2 control-label">Pick Your Bowl</label> 
+	        <select name="subject" ng-model="email.subject">
+			  <option>Vegetarian</option>
+			  <option>with Chicken</option>
+			</select>
+		</div>
+		
+      		 <div class="form-group col-sm-10 col-lg-10"> 
+        <label class="col-sm-2 control-label">Notes</label>      
+            <textarea ng-model="email.html" name="html" placeholder="Enter Text Here.."></textarea>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10 col-lg-10">
+	        <button class= "btn btn-primary btn-xl" id="emailSubmitBn" type="submit" ng-click="submitEmail()">
+	            Submit
+	        </button>
+	     </div>
+</section>

@@ -18,7 +18,7 @@
 
       
      <p class="transitions">
-        <a ng-click="showme=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Today's Bowl</a>     
+        <a class="btn btn-primary btn-lg" href="#" role="button">Today's Bowl</a>     
       </p> 
     
       
@@ -39,12 +39,24 @@
                 </div>
               </div><!--end panel-->
                 <ul class="transitions falist">
-           
-              <li><a ng-click="showme=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Place Order</a></li>
-              <li><a ui-sref="orderform"><button ng-show="showme"class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Pick Up</button></a></li>
-              <li><button ng-show="showme" class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Catering</button> </li>     
-      
+               <div>
+                  <li><a ng-click="showme=true" ng-hide="showme" class="btn btn-primary btn-lg" role="button">Place Order</a></li>
+                  
+                  <li>
+                  
+                      <button ng-show="showme" class="btn btn-primary btn-lg  animate-show-hide" role="button">Pick Up</button>
+                  
+                  </li>
+                  
+                  <li>
+                    <button ng-show="showme" class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Catering
+                    </button> 
+                  </li>  
+                </div>   
               </ul>
+             <div class="view-animate-container">
+                <div ng-view class="view-animate"></div>
+              </div>
             </div>
             <div class="col-md-6">
             <div class="align-left">
