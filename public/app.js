@@ -1,1 +1,5 @@
-angular.module('app', ['fxInstagram']);
+angular.module('app', [
+	'fxInstagram',
+	'ngAnimate',
+	'ngRoute'
+]);
