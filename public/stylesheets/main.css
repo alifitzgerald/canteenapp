@@ -41,14 +41,14 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #BAE371;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #BAE371;
 }
 
 h1,
@@ -89,7 +89,7 @@ h6 {
 .open .dropdown-toggle.btn-primary {
     border-color: #f6bf01;
     color: #fff;
-    background-color: #fec503;
+    background-color: #BAE371;
 }
 
 .btn-primary:active,
@@ -114,7 +114,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
     border-color: #fed136;
-    background-color: #fed136;
+    background-color: #BAE371;
 }
 
 .btn-primary .badge {
@@ -131,7 +131,7 @@ fieldset[disabled] .btn-primary.active {
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #BAE371;
 }
 
 .btn-xl:hover,
@@ -141,7 +141,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #f6bf01;
     color: #fff;
-    background-color: #fec503;
+    background-color: #BAE371;
 }
 
 .btn-xl:active,
@@ -165,12 +165,12 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #BAE371;
+    background-color: #BAE371;
 }
 
 .btn-xl .badge {
-    color: #fed136;
+    color: #BAE371;
     background-color: #fff;
 }
 
