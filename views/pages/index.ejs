@@ -18,7 +18,7 @@
 
       
      <p class="transitions">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Today's Bowl</a>     
+        <a href="#order" class="btn btn-primary btn-lg" href="#" role="button">Place Order</a>     
       </p> 
     
       
@@ -44,13 +44,17 @@
                   
                   <li>
                   
-                      <a href="#order"><button ng-show="showme" ng-click="showorder=true" class="btn btn-primary btn-lg  animate-show-hide" role="button">Pick Up</button></a>
+                      <a href="#order">
+                      <button ng-show="showme" ng-click="showorder=true" class="btn btn-primary btn-lg  animate-show-hide" role="button">Pick Up</button>
+                      </a>
                   
                   </li>
                   
                   <li>
+                    <a href="#csa">
                     <button ng-show="showme" ng-click="showcatering=true" class="btn btn-primary btn-lg  animate-show-hide" href="#" role="button">Catering
                     </button> 
+                    </a>
                   </li>  
                 </div>   
               </ul>
@@ -59,9 +63,19 @@
             <div class="align-left">
             <ul class="falist desc">
              
-              <li><h2 id="line-item"><i class="fa fa-check-square"></i> Reserve Your Bowl</h2></li>
+              <a href="#order" ng-click="showorder=true">
+                <li>
+                  <h2 id="line-item">
+                  <i class="fa fa-check-square"></i> Reserve Your Bowl
+                  </h2>
+                </li>
+              </a>
           
-              <li><h2 id="line-item"><i class="fa fa-check-square"></i> Sign up for Receive Weekly Bowl - CSA Style*</h2></li>
+              <a  href="#csa" ng-click="showcatering=true">
+                <li>
+                  <h2 id="line-item"><i class="fa fa-check-square"></i> Sign up for Receive Weekly Bowl - CSA Style*</h2>
+                </li>
+              </a>
               
             </ul>
             <hr />
@@ -88,7 +102,7 @@
 
   <div ng-show="showcatering" class="row animate-show-hide">
       <div class="col-md-12">
-          <div class="typeform-widget" data-url="https://ghostwriteio.typeform.com/to/KQjJgy" data-text="Catering" style="width:100%;height:500px;"></div>
+          <div id="csa"class="typeform-widget" data-url="https://ghostwriteio.typeform.com/to/KQjJgy" data-text="Catering" style="width:100%;height:500px;"></div>
           <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
       </div>
   </div>
@@ -107,7 +121,7 @@
       <div class="col-md-4 elements">
         <img class="button-effects" src="images/clean.png">
           <h2>Clean</h2>
-          <p>All the good stuff - Whole grains, fresh veggies, and heirloom beans - without the gunk. No chemical preservatives, refined flours, processed sugars, and hydrogenated oils. </p>
+          <p>All the good stuff - Whole grains, fresh veggies, and heirloom beans - without the gunk. No chemical preservatives, refined flours, processed sugars, or hydrogenated oils. </p>
       </div>
        <div class="col-md-4 elements">
           <img class="button-effects" src="images/seasonal.png">
@@ -150,28 +164,29 @@
         <div>
           <div class="container">
             <div class="row">
-              <h4 class="center">Reserve your bowl online in advance. Become a member and save $$!</h4> 
+              <h4 class="center">1. Choose "Just You" and Pick Up Lunch Today! Or</h4>
+              <h4 class="center">2. Recruit 10 Friends choose "Trial Run" and Save $$</h4>
                  <div class="row">
                   <ul class="falist">
                     <div class="col-md-4 elements">
                        <li><img class="button-effects" src="images/single.png">
                         <h2>Just You</h2>
                         <p>Reserve your bowl 24 hrs in advance for pick-up at one of our weekly locations. </p>
-                          <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Order Now</a></li> 
+                          <a href="#order" ng-click="showorder=true" ng-hide="showme" class="btn btn-primary btn-lg"  role="button">Order Now</a></li> 
                     </div>
                      <div class="col-md-4 elements">
                         <li><img class="button-effects" src="images/4-person.png">
                         <h2>You + Your Crew (10+)</h2>
                         <p>Get 10+ hungry friends together, and we’ll bring lunch to you!</p>
-                          <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Trial Run</a>
+                          <a ng-click="showcatering=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#csa" role="button">Trial Run</a>
                         </li>
                     </div>
                     <div class="col-md-4 elements">
                       <li>
                         <img class="button-effects" src="images/custom.png">
                         <h2>DIY // Custom</h2>
-                        <p>We provide spreads for office lunches, catering, and team-building (community?) meals.</p>  
-                        <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Contact Us </a>
+                        <p>We provide spreads for office lunches, catering, and team-building (community) meals.</p>  
+                        <a ng-click="showcatering=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#csa" role="button">Contact Us </a>
                       </li>
                     
                     </div>
@@ -219,7 +234,7 @@
               <div class="col-md-4 elements">
                  <li><img class="button-effects" src="images/ordering.png">
                   <h2>Ordering</h2>
-                  <p>Advance orders help us plan more efficiently, source ingredients from small local farmers, and reduce food waste.</p>
+                  <p>Order in advance and help us plan more efficiently, source ingredients from small local farmers, and reduce food waste.</p>
                     </li> 
               </div>
                <div class="col-md-4 elements">
@@ -232,7 +247,7 @@
                   <li>
                   <img class="button-effects" src="images/community.png">
                   <h2>Community</h2>
-                  <p>Good food brings us together: farmers, producers, and consumers. Experience the season harvest with us!</p>
+                  <p>Good food brings us together: farmers, producers, and consumers. Experience the season. Harvest with us!</p>
                   </li>
               </div>
             </ul>
@@ -240,7 +255,7 @@
     </div>
     
       <div class="col-md-12 center">
-        <a ng-click="" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Order Now</a>
+        <a href="#order" ng-click="showorder=true" ng-hide="showme" class="btn btn-primary btn-lg" href="#" role="button">Order Now</a>
       </div>
     
   </div>
@@ -249,18 +264,18 @@
    <div class="featured bgimage">
    <a id="about"><div class="container"></a>
     <div class="row">
-      <h2 class="headers">ABOUT CANTEEN AND CO</h2> 
+      <h2 class="headers">ABOUT CANTEEN AND CO.</h2> 
       <div class="col-lg-5">
        
         <p> Canteen + Co. makes eating better possible.
 
-          We’re three former food truckers with an obsession with food - and a passion for people. We looked for clean food on the streets of Boston… but no such luck. We decided to bring clean food to you, and we’re inviting you to join us.
+          We’re three former food truckers with a food obsession - and a passion for people. We looked for clean food on the streets of Boston… and found no such luck. We decided to bring clean food to you, and we’re inviting you to join us.
 
 
-          We got our start hosting a recurring community dinners as The Community Canteen. Once a month, we served up simple seasonal bowls to a rotating group of members. Turns out that people liked eating our food - and loved eating together.
+          We got our start hosting recurring community dinners as The Community Canteen. Once a month, we served up simple seasonal bowls to a rotating group of members. Turns out that people liked eating our food - and loved eating together.
 
 
-          We provide good clean food for gatherings. With our seasonal bowls and consciously sourced snacks we’re launching a new way of eating. Get connected with our community to join us for a dinner, follow us to find out where popping up next, or give us a ring to ask about our catering services.
+          We provide good clean food for gatherings. With our seasonal bowls and consciously sourced snacks we’re launching a new way to eat. Get connected with our community to join us for a dinner, follow us to find out where popping up next, or give us a ring to ask about our csa style catering services.
 
           Let’s eat better, together.
         </p><!--end col-lg-5 -->
@@ -282,5 +297,12 @@
 
 
 </body>
+<footer>
+  <div class="row">
+    <div class="col-md-12">
+    <p> All Rights Reserved. Canteen and Co. LLC</p>
+    </div>
+  </div>
+</footer>
 
 </html>
